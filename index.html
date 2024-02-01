@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Exploring Spatial Schema Intuitions in Large Language and Vision Models">
+  <meta name="keywords" content="Spatial Schemas, LLM, ACL">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exploring Spatial Schemas in Large Language Models</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Exploring Spatial Schema Intuitions in Large Language and Vision
+              Models</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://www.aclweb.org/portal/">Anonymous ACL Submission</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.aclweb.org/portal/">Anonymous ACL Submission</a><sup>2</sup>,</span>
+              <span class="author-block">
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Anonymous,</span>
+              <span class="author-block"><sup>2</sup>Anonymous</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Demonstrating exceptional versatility in diverse NLP tasks,
+               large language models exhibit notable proficiency without 
+               task-specific fine-tuning. Despite this adaptability, the 
+               question of embodiment in LLMs remains underexplored, 
+               distinguishing them from embodied systems in robotics where 
+               sensory perception directly informs physical action.
+               Our investigation navigates the intriguing terrain of whether 
+               LLMs, despite their non-embodied nature, effectively capture 
+               implicit human intuitions about fundamental, spatial building 
+               blocks of language. We employ insights from spatial cognitive 
+               foundations developed through early sensorimotor experiences, 
+               guiding our exploration through the reproduction of three 
+               psycholinguistic experiments. Surprisingly, correlations 
+               between model outputs and human responses emerge, revealing 
+               adaptability without a tangible connection to embodied experiences. 
+               Notable distinctions include polarized language model responses 
+               and reduced correlations in vision language models. This research 
+               contributes to a nuanced understanding of the interplay between 
+               language, sensory experiences, and cognition in cutting-edge 
+               language models.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+
+      <!-- Selected Experiments. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Reproduced Experiments</h2>
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h3 class="title is-5">Experiment 01</h3>
+          <p style="text-align: left;">
+            In the first experiment, we replicate
+            studies by <b>Gibbs et al. (<a
+                href="https://academic.oup.com/jos/article-abstract/11/4/231/1640108?login=false"
+                target="_blank">1994</a>)</b>,
+            who explore intuitions about image schemas with the verb <i>to stand</i>.
+            In their study, participants rated relatedness between 32 phrases and image schemas
+            (balance, verticality, center-periphery, resistance, linkage) on
+            a Likert scale (1-7). Each participant rated all phrases for one schema before moving
+            to the next, with schema orders counterbalanced. The experiment was
+            repeated with a synonym replacing <i>stand</i> in each phrase. Phrases are represented
+            by image schema profiles, showing average participant-rated relatedness that can be correlated with LLM performance. <br><br>
+            <b>Example: </b><br>
+            <tt>Consider the notion of Verticality. Verticality refers to the 
+              sense of an extension along an up-down orientation. How strongly 
+              is the phrase "stand at attention" related to this notion on a 
+              scale from 1 (not at all related) to 7 (very strongly related)?</tt>
+          </p>
+        </div>
+        <div class="column">
+          <h3 class="title is-5">Experiment 02</h3>
+          <p style="text-align: left;">
+            The second experiment replicates a study by <b>Beitel et al. (<a
+                href="https://www.jbe-platform.com/content/books/9789027283696-cilt.177.11bei"
+                target="_blank">2001</a>)</b>,
+            The authors adopt the experimental approach of Experiment 01 but focus
+            on phrases containing the preposition <i>on</i>. They introduce a new
+            set of image schemas (support, pressure, constraint, covering, visibility)
+            relevant to this context. Unlike the general definitions, participants
+            now refer to example sentences, each accompanied by statements explaining
+            how the image schema relates to it. For instance, support is introduced
+            with an example: "In the case of the use of 'on' in 'the book is on the
+            desk': the support relation refers to the desk supporting the book." <br><br>
+            <b>Example: </b><br>
+            <tt>In the case of the use of "on" in "the book is on the desk": the VISIBILITY relation refers to the book being visible on the desk.
+              On a scale from 1 (not at all appropriate) to 7 (very appropriate), how appropriate is the concept VISIBILITY in regards to the phrase: "There is a physician on call"?</tt>
+          </p>
+
+          <!-- Content for Exp 02 -->
+        </div>
+        <div class="column">
+          <h3 class="title is-5">Experiment 03</h3>
+          <!-- Content for Exp 03 -->
+          <p style="text-align: left;">
+            In their study, <b>Richardson et al. (<a href="https://escholarship.org/uc/item/9vs820bx"
+                target="_blank">2001</a>)</b>
+            offer experimental support for image schemas through a task where
+            participants select images corresponding to 30 verbs categorized by
+            concreteness and primary directionality (horizontal, vertical, neutral).
+            In their study, participants choose from four images
+            marked with arrows to indicate directionality on the horizontal
+            and vertical axes. The results are analyzed in relation to
+            the primary direction (horizontal/vertical). The study demonstrates
+            the connection between linguistic concreteness and spatial
+            representation in a visual task, requiring an evaluation using state-of-the-art vision language models. <br><br>
+            <b>Example (Pseudo-Visual Condition): </b><br>
+            <tt>Given the event "lifted", which of the following arrows best represents this event: ↑, ↓, ←, →. A research participant would choose the arrow: </tt>
+          </p>
+        </div>
+      </div>
+      <!--/ Selected Experiments. -->
+
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Selected Models</h2>
+          <div class="publication-image">
+            <img src="static/images/models.png" alt="Selected Models Image"  width="80%">
+          </div>
+        </div>
+      </div>
+      <!--/ Paper video. -->
+
+    </div>
+  </section>
+
+
+
+  <!-- Exp 1 and 2 -->
+
+
+  <section class="section has-text-centered" id="scientific-data-viewer">
+    <div class="container">
+      <h2 class="title">Results: Experiment 01 and 02</h2>
+      <div id="conditionButtons">
+        <button class="conditionButton text" onclick="selectCondition2('Exp1')">Experiment 01</button>
+        <button class="conditionButton pseudo-visual" onclick="selectCondition2('Exp2')">Experiment 02</button>
+      </div>
+
+      <div id="modelButtons2" class="hidden">
+        <!-- Models will be dynamically added here based on the selected condition -->
+      </div>
+
+      <div id="imageContainer">
+        <img id="selectedImage2" src="images/default2.png" alt="Click on a model to select results">
+      </div>
+    </div>
+
+    <script>
+      const models2 = {
+        Exp1: ['Llama-2-7b-chat', 'Llama-2-13b-chat', 'Llama-2-70b-chat', 'GPT-3-base', 'GPT-3-instruct', 'GPT-3-instruct(logprobs-averaged)', "GPT-4"],
+        Exp2: ['Llama-2-7b-chat', 'Llama-2-13b-chat', 'Llama-2-70b-chat', 'GPT-3-base', 'GPT-3-instruct', 'GPT-3-instruct(logprobs-averaged)', "GPT-4"]
+      };
+
+      function selectCondition2(condition) {
+        var modelButtons = document.getElementById("modelButtons2");
+        modelButtons.innerHTML = "";
+
+        // Add each model as a button
+        models2[condition].forEach(model => {
+          var button = document.createElement("button");
+          button.className = "modelButton";
+          button.textContent = model;
+          button.onclick = function () {
+            selectModel2(condition, model);
+          };
+          modelButtons.appendChild(button);
+        });
+
+        // Show the model buttons
+        modelButtons.classList.remove("hidden");
+
+        updateImage2(condition, models2[condition][0]);
+      }
+
+      function selectModel2(condition, model) {
+        var modelButtons = document.getElementById("modelButtons2");
+
+        // Toggle the selected state for the model buttons
+        modelButtons.childNodes.forEach(button => {
+          button.classList.remove("selectedModel");
+          if (button.textContent === model) {
+            button.classList.add("selectedModel");
+          }
+        });
+
+        updateImage2(condition, model);
+      }
+
+      function updateImage2(condition, model) {
+        var imagePath = `images/${condition}/${condition}_${model}.png`;
+        document.getElementById("selectedImage2").src = imagePath;
+      }
+
+    </script>
+  </section>
+
+
+
+  <!-- Add this section to the existing HTML code -->
+
+  <section class="section has-text-centered" id="scientific-data-viewer">
+    <div class="container">
+      <h2 class="title">Results: Experiment 03</h2>
+      <div id="conditionButtons">
+        <button class="conditionButton text" onclick="selectCondition('TEXT')">TEXT</button>
+        <button class="conditionButton pseudo-visual" onclick="selectCondition('PSEUDO-VISUAL')">PSEUDO-VISUAL</button>
+        <button class="conditionButton visual" onclick="selectCondition('VISUAL')">VISUAL</button>
+      </div>
+
+      <div id="modelButtons" class="hidden">
+        <!-- Models will be dynamically added here based on the selected condition -->
+      </div>
+
+      <div id="imageContainer">
+        <img id="selectedImage" src="images/default.png" alt="Click on a model to select results">
+      </div>
+    </div>
+
+    <script>
+      const models = {
+        TEXT: ['Llama-2-13b', 'Llama-2-70b', 'Llama-2-13b-chat', 'Llama-2-70b-chat', 'GPT-3-base', 'GPT-3-instruct', "GPT-4"],
+        "PSEUDO-VISUAL": ['Llama-2-13b', 'Llama-2-70b', 'Llama-2-13b-chat', 'Llama-2-70b-chat', 'GPT-3-base', 'GPT-3-instruct', "GPT-4"],
+        VISUAL: ['idefics-80b', 'idefics-80b-instruct', 'GPT-4-vision']
+      };
+
+      function selectCondition(condition) {
+        var modelButtons = document.getElementById("modelButtons");
+        modelButtons.innerHTML = "";
+
+        // Add each model as a button
+        models[condition].forEach(model => {
+          var button = document.createElement("button");
+          button.className = "modelButton";
+          button.textContent = model;
+          button.onclick = function () {
+            selectModel(condition, model);
+          };
+          modelButtons.appendChild(button);
+        });
+
+        // Show the model buttons
+        modelButtons.classList.remove("hidden");
+
+        updateImage(condition, models[condition][0]);
+      }
+
+      function selectModel(condition, model) {
+        var modelButtons = document.getElementById("modelButtons");
+
+        // Toggle the selected state for the model buttons
+        modelButtons.childNodes.forEach(button => {
+          button.classList.remove("selectedModel");
+          if (button.textContent === model) {
+            button.classList.add("selectedModel");
+          }
+        });
+
+        updateImage(condition, model);
+      }
+
+      function updateImage(condition, model) {
+        var imagePath = `images/${condition}/${condition}_${model}_Choices.png`;
+        document.getElementById("selectedImage").src = imagePath;
+      }
+    </script>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{anonyear,
+  author    = {Anonymous},
+  title     = {Exploring Spatial Schemas in Large Language Models},
+  journal   = {journal},
+  year      = {year},
+}</code></pre>
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website was built using <a href="https://github.com/nerfies/nerfies.github.io">nerfies code</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
